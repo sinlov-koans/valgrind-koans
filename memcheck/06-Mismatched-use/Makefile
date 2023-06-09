@@ -7,11 +7,11 @@ ENV_CC_FILE=${ENV_ROOT_NAME}.cpp
 ENV_VALGRIND_LOG_FILE=./valgrind_report.log
 
 cleanValgrind:
-	-@RM *.log
-	-@RM -r ${ENV_ROOT_NAME}.dSYM/
+	-@$(RM) *.log
+	-@$(RM) -r ${ENV_ROOT_NAME}.dSYM/
 
 cleanBuild:
-	-@RM -r ${ENV_ROOT_NAME}
+	-@$(RM) -r ${ENV_ROOT_NAME}
 
 cleanAll: cleanValgrind cleanBuild
 	$(info just clean all)
