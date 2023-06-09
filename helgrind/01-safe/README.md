@@ -7,29 +7,11 @@ make logByValgrind
 - log
 
 ```
-==19235== Possible data race during read of size 4 at 0x100008000 by thread #2
-==19235== Locks held: none
-==19235==    at 0x100003F48: child_fn (main.c:6)
-==19235==    by 0x7FF81B1F31D2: ???
-==19235==    by 0x7FF81B1EEBD2: ???
-==19235==
-==19235== This conflicts with a previous write of size 4 by thread #1
-==19235== Locks held: none
-==19235==    at 0x100003F8F: main (main.c:13)
-==19235==  Address 0x100008000 is in a rw- anonymous segment
-==19235==
-==19235== ----------------------------------------------------------------
-==19235==
-==19235== Possible data race during write of size 4 at 0x100008000 by thread #2
-==19235== Locks held: none
-==19235==    at 0x100003F51: child_fn (main.c:6)
-==19235==    by 0x7FF81B1F31D2: ???
-==19235==    by 0x7FF81B1EEBD2: ???
-==19235==
-==19235== This conflicts with a previous write of size 4 by thread #1
-==19235== Locks held: none
-==19235==    at 0x100003F8F: main (main.c:13)
-==19235==  Address 0x100008000 is in a rw- anonymous segment
-==19235==
-==19235== ----------------------------------------------------------------
+==3947998== Command: ./main
+==3947998==
+==3947998==
+==3947998== Use --history-level=approx or =none to gain increased speed, at
+==3947998== the cost of reduced accuracy of conflicting-access information
+==3947998== For lists of detected and suppressed errors, rerun with: -s
+==3947998== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 7 from 7)
 ```

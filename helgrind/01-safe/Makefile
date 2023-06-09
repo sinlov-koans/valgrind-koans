@@ -18,7 +18,7 @@ cleanAll: cleanValgrind cleanBuild
 
 build: cleanBuild
 	$(info => use -g to open gcc debug info)
-	gcc -g ${ENV_CC_FILE} -o ${ENV_ROOT_NAME}
+	gcc -g -pthread -lpthread ${ENV_CC_FILE} -o ${ENV_ROOT_NAME}
 
 checkByValgrind: build
 	valgrind --tool=helgrind ./${ENV_ROOT_NAME}
